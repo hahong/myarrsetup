@@ -1,0 +1,222 @@
+* n_jobs = 5
+merge: no waveform processing
+Linear transformation parameters: [0.99994728119735488, 4029374080.279407]
+Estimated delay: 1109.43478261
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..110]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+* Shifting based on this rule: 20110720A
+At 1 out of 1493          At 22 out of 1493          At 51 out of 1493          At 79 out of 1493          At 107 out of 1493          At 136 out of 1493          At 164 out of 1493          merge: no waveform processing
+Linear transformation parameters: [0.99994724431645177, 820025825.82082856]
+Estimated delay: 1127.3040293
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..96]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+At 197 out of 1493          At 226 out of 1493          At 258 out of 1493          At 289 out of 1493          At 1 out of 2429          At 2 out of 2429          At 3 out of 2429          At 4 out of 2429          At 5 out of 2429          At 6 out of 2429          At 7 out of 2429          At 317 out of 1493          At 8 out of 2429          At 9 out of 2429          At 10 out of 2429          At 11 out of 2429          At 12 out of 2429          At 13 out of 2429          At 14 out of 2429          At 15 out of 2429          At 16 out of 2429          At 17 out of 2429          At 18 out of 2429          At 19 out of 2429          At 20 out of 2429          At 21 out of 2429          At 22 out of 2429          At 23 out of 2429          At 24 out of 2429          At 25 out of 2429          At 26 out of 2429          At 27 out of 2429          At 28 out of 2429          At 29 out of 2429          At 348 out of 1493          At 61 out of 2429          At 369 out of 1493          At 100 out of 2429          At 404 out of 1493          At 134 out of 2429          merge: no waveform processing
+Linear transformation parameters: [0.99994722325558738, 10307975618.740988]
+Estimated delay: 1205.44855967
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..110]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+* Shifting based on this rule: 20110720A
+At 434 out of 1493          At 173 out of 2429          At 464 out of 1493          At 202 out of 2429          At 495 out of 1493          At 230 out of 2429          At 1 out of 6000          At 261 out of 2429          At 25 out of 6000          At 527 out of 1493          At 55 out of 6000          At 293 out of 2429          At 551 out of 1493          At 83 out of 6000          At 113 out of 6000          At 324 out of 2429          At 585 out of 1493          At 142 out of 6000          At 353 out of 2429          At 169 out of 6000          At 613 out of 1493          At 382 out of 2429          At 192 out of 6000          At 222 out of 6000          At 407 out of 2429          At 643 out of 1493          At 254 out of 6000          At 672 out of 1493          At 441 out of 2429          At 281 out of 6000          At 310 out of 6000          At 706 out of 1493          At 468 out of 2429          At 340 out of 6000          At 498 out of 2429          At 736 out of 1493          At 374 out of 6000          At 403 out of 6000          At 532 out of 2429          At 767 out of 1493          At 436 out of 6000          At 563 out of 2429          At 796 out of 1493          At 468 out of 6000          At 500 out of 6000          At 823 out of 1493          At 592 out of 2429          At 531 out of 6000          At 622 out of 2429          At 857 out of 1493          At 561 out of 6000          At 649 out of 2429          At 589 out of 6000          At 889 out of 1493          At 681 out of 2429          At 624 out of 6000          At 921 out of 1493          At 654 out of 6000          At 710 out of 2429          At 679 out of 6000          At 945 out of 1493          At 743 out of 2429          At 711 out of 6000          At 772 out of 2429          At 970 out of 1493          At 738 out of 6000          At 800 out of 2429          At 998 out of 1493          At 777 out of 6000          At 828 out of 2429          At 814 out of 6000          At 1025 out of 1493          At 859 out of 2429          At 842 out of 6000          At 870 out of 6000          At 1056 out of 1493          At 888 out of 2429          At 909 out of 2429          At 899 out of 6000          At 1083 out of 1493          At 941 out of 2429          At 930 out of 6000          At 954 out of 6000          At 1115 out of 1493          At 973 out of 2429          At 996 out of 2429          At 983 out of 6000          At 1154 out of 1493          At 1022 out of 6000          At 1028 out of 2429          At 1052 out of 2429          At 1191 out of 1493          At 1054 out of 6000          At 1085 out of 6000          At 1085 out of 2429          At 1114 out of 6000          At 1223 out of 1493          At 1135 out of 6000          At 1111 out of 2429          At 1253 out of 1493          At 1170 out of 6000          At 1146 out of 2429          At 1199 out of 6000          At 1282 out of 1493          At 1174 out of 2429          At 1230 out of 6000          At 1201 out of 2429          At 1305 out of 1493          At 1264 out of 6000          At 1228 out of 2429          At 1344 out of 1493          At 1294 out of 6000          At 1251 out of 2429          merge: no waveform processing
+Linear transformation parameters: [0.99994727279141649, 6607325207.0514898]
+Estimated delay: 1088.96296296
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..110]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+* Shifting based on this rule: 20110720A
+At 1327 out of 6000          At 1372 out of 1493          At 1283 out of 2429          At 1359 out of 6000          At 1399 out of 1493          At 1431 out of 1493          At 1313 out of 2429          At 1461 out of 1493          At 1 out of 2117          At 26 out of 2117          Done.                                
+At 1391 out of 6000          At 55 out of 2117          At 1341 out of 2429          At 85 out of 2117          At 1418 out of 6000          merge: no waveform processing
+Linear transformation parameters: [0.99994724155303427, 820025811.86210275]
+Estimated delay: 1127.3040293
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..110]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+* Shifting based on this rule: 20110720A
+At 124 out of 2117          At 1376 out of 2429          At 1446 out of 6000          At 153 out of 2117          At 186 out of 2117          At 1397 out of 2429          At 1479 out of 6000          At 219 out of 2117          At 1 out of 2429          At 1511 out of 6000          At 2 out of 2429          At 3 out of 2429          At 4 out of 2429          At 5 out of 2429          At 6 out of 2429          At 1430 out of 2429          At 7 out of 2429          At 8 out of 2429          At 9 out of 2429          At 10 out of 2429          At 11 out of 2429          At 12 out of 2429          At 13 out of 2429          At 249 out of 2117          At 14 out of 2429          At 15 out of 2429          At 16 out of 2429          At 17 out of 2429          At 18 out of 2429          At 19 out of 2429          At 20 out of 2429          At 21 out of 2429          At 22 out of 2429          At 23 out of 2429          At 24 out of 2429          At 25 out of 2429          At 26 out of 2429          At 27 out of 2429          At 28 out of 2429          At 29 out of 2429          At 1537 out of 6000          At 281 out of 2117          At 1462 out of 2429          At 312 out of 2117          At 61 out of 2429          At 1558 out of 6000          At 344 out of 2117          At 1499 out of 2429          At 1581 out of 6000          At 100 out of 2429          At 371 out of 2117          At 1529 out of 2429          At 1610 out of 6000          At 134 out of 2429          At 403 out of 2117          At 1557 out of 2429          At 426 out of 2117          At 173 out of 2429          At 1642 out of 6000          At 202 out of 2429          At 1675 out of 6000          At 454 out of 2117          At 1588 out of 2429          At 475 out of 2117          At 230 out of 2429          At 1618 out of 2429          At 503 out of 2117          At 1707 out of 6000          At 261 out of 2429          At 535 out of 2117          At 1647 out of 2429          At 1735 out of 6000          At 293 out of 2429          At 569 out of 2117          At 1679 out of 2429          At 1764 out of 6000          At 600 out of 2117          At 324 out of 2429          At 1709 out of 2429          At 654 out of 2117          At 1798 out of 6000          At 683 out of 2117          At 353 out of 2429          At 1737 out of 2429          At 1826 out of 6000          At 714 out of 2117          At 382 out of 2429          At 1767 out of 2429          At 1856 out of 6000          At 743 out of 2117          At 407 out of 2429          At 1791 out of 2429          At 1887 out of 6000          At 776 out of 2117          At 806 out of 2117          At 1824 out of 2429          At 1916 out of 6000          At 441 out of 2429          At 839 out of 2117          At 1947 out of 6000          At 1878 out of 2429          At 868 out of 2117          At 468 out of 2429          At 1907 out of 2429          At 2001 out of 6000          At 898 out of 2117          At 498 out of 2429          At 2024 out of 6000          At 1936 out of 2429          At 926 out of 2117          At 2051 out of 6000          At 1967 out of 2429          At 532 out of 2429          At 959 out of 2117          At 1999 out of 2429          At 2085 out of 6000          At 563 out of 2429          At 990 out of 2117          At 2027 out of 2429          At 1018 out of 2117          At 2124 out of 6000          At 592 out of 2429          At 2145 out of 6000          At 2048 out of 2429          At 1057 out of 2117          At 622 out of 2429          At 2078 out of 2429          At 2175 out of 6000          At 1087 out of 2117          At 649 out of 2429          At 2099 out of 2429          At 1116 out of 2117          At 2205 out of 6000          At 681 out of 2429          At 2130 out of 2429          At 1148 out of 2117          At 2237 out of 6000          At 710 out of 2429          At 1180 out of 2117          At 2165 out of 2429          At 2266 out of 6000          At 743 out of 2429          At 2192 out of 2429          At 1215 out of 2117          At 772 out of 2429          At 2294 out of 6000          At 1241 out of 2117          At 2221 out of 2429          At 2323 out of 6000          At 800 out of 2429          At 1275 out of 2117          At 2352 out of 6000          At 2255 out of 2429          At 828 out of 2429          At 1306 out of 2117          At 2383 out of 6000          At 2287 out of 2429          At 859 out of 2429          At 1333 out of 2117          At 2412 out of 6000          At 2319 out of 2429          At 888 out of 2429          At 1361 out of 2117          At 2444 out of 6000          At 2347 out of 2429          At 909 out of 2429          At 1393 out of 2117          At 2473 out of 6000          At 2505 out of 6000          At 2375 out of 2429          At 941 out of 2429          At 1421 out of 2117          At 2407 out of 2429          At 2526 out of 6000          At 973 out of 2429          At 1451 out of 2117          At 2557 out of 6000          At 996 out of 2429          At 1485 out of 2117          Done.                                
+At 2587 out of 6000          At 1028 out of 2429          At 1509 out of 2117          At 2618 out of 6000          At 1052 out of 2429          At 2647 out of 6000          At 1541 out of 2117          At 2670 out of 6000          At 1085 out of 2429          At 1111 out of 2429          At 1568 out of 2117          At 2700 out of 6000          At 2726 out of 6000          At 1146 out of 2429          At 1595 out of 2117          At 2758 out of 6000          At 1174 out of 2429          At 1630 out of 2117          At 2786 out of 6000          At 1201 out of 2429          At 1660 out of 2117          At 2821 out of 6000          At 1228 out of 2429          At 1688 out of 2117          At 2852 out of 6000          At 1251 out of 2429          At 2882 out of 6000          At 1717 out of 2117          At 1283 out of 2429          At 2910 out of 6000          At 1749 out of 2117          At 1313 out of 2429          At 2940 out of 6000          At 1786 out of 2117          At 1341 out of 2429          At 2967 out of 6000          At 1376 out of 2429          At 1818 out of 2117          At 2991 out of 6000          At 1397 out of 2429          At 1847 out of 2117          At 3019 out of 6000          At 1871 out of 2117          At 1430 out of 2429          At 3043 out of 6000          At 1900 out of 2117          At 1462 out of 2429          At 3072 out of 6000          At 1923 out of 2117          At 1499 out of 2429          At 3104 out of 6000          At 1944 out of 2117          At 3132 out of 6000          At 1529 out of 2429          At 1975 out of 2117          At 3163 out of 6000          At 1557 out of 2429          At 2004 out of 2117          At 1588 out of 2429          At 3195 out of 6000          At 1618 out of 2429          At 2032 out of 2117          At 3227 out of 6000          At 1647 out of 2429          At 2060 out of 2117          At 3256 out of 6000          At 2088 out of 2117          At 1679 out of 2429          At 3285 out of 6000          Done.                                
+At 3313 out of 6000          At 1709 out of 2429          At 1737 out of 2429          At 3342 out of 6000          At 3375 out of 6000          At 1767 out of 2429          At 3429 out of 6000          At 1791 out of 2429          At 3461 out of 6000          At 1824 out of 2429          At 3494 out of 6000          At 3524 out of 6000          At 1878 out of 2429          At 1907 out of 2429          At 3557 out of 6000          merge: no waveform processing
+Linear transformation parameters: [0.99994727907627234, 4029374067.6425776]
+Estimated delay: 1110.82629108
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..96]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+At 1936 out of 2429          At 3591 out of 6000          At 1 out of 1493          At 22 out of 1493          At 51 out of 1493          At 1967 out of 2429          At 79 out of 1493          At 107 out of 1493          At 136 out of 1493          At 3625 out of 6000          At 164 out of 1493          At 197 out of 1493          At 226 out of 1493          At 1999 out of 2429          At 258 out of 1493          At 3657 out of 6000          At 289 out of 1493          At 317 out of 1493          At 348 out of 1493          At 369 out of 1493          At 3684 out of 6000          At 404 out of 1493          At 2027 out of 2429          At 434 out of 1493          At 464 out of 1493          At 495 out of 1493          At 3719 out of 6000          At 2048 out of 2429          At 527 out of 1493          At 551 out of 1493          At 585 out of 1493          At 3747 out of 6000          At 613 out of 1493          At 2078 out of 2429          At 643 out of 1493          At 672 out of 1493          At 706 out of 1493          At 3779 out of 6000          At 736 out of 1493          At 767 out of 1493          At 2099 out of 2429          At 796 out of 1493          At 823 out of 1493          At 3818 out of 6000          At 857 out of 1493          At 2130 out of 2429          At 889 out of 1493          At 921 out of 1493          At 3843 out of 6000          At 2165 out of 2429          At 945 out of 1493          At 970 out of 1493          At 3876 out of 6000          At 998 out of 1493          At 1025 out of 1493          At 2192 out of 2429          At 1056 out of 1493          At 3907 out of 6000          At 1083 out of 1493          At 2221 out of 2429          At 1115 out of 1493          At 3944 out of 6000          At 1154 out of 1493          At 1191 out of 1493          At 3971 out of 6000          At 2255 out of 2429          At 1223 out of 1493          At 1253 out of 1493          At 4001 out of 6000          At 2287 out of 2429          At 1282 out of 1493          At 1305 out of 1493          At 4024 out of 6000          At 1344 out of 1493          At 1372 out of 1493          At 2319 out of 2429          At 1399 out of 1493          At 4054 out of 6000          At 1431 out of 1493          At 1461 out of 1493          At 2347 out of 2429          At 4083 out of 6000          Done.                                
+At 2375 out of 2429          At 4111 out of 6000          At 4145 out of 6000          At 2407 out of 2429          At 4173 out of 6000          At 4210 out of 6000          Done.                                
+[Parallel(n_jobs=5)]: Done   1 out of   8 |elapsed: 30.8min remaining: 215.3min
+[Parallel(n_jobs=5)]: Done   2 out of   8 |elapsed: 30.8min remaining: 92.3min
+[Parallel(n_jobs=5)]: Done   3 out of   8 |elapsed: 30.8min remaining: 51.3min
+At 4238 out of 6000          At 4269 out of 6000          At 4299 out of 6000          At 4326 out of 6000          At 4358 out of 6000          At 4389 out of 6000          At 4421 out of 6000          At 4451 out of 6000          At 4475 out of 6000          At 4529 out of 6000          At 4563 out of 6000          At 4584 out of 6000          At 4623 out of 6000          At 4649 out of 6000          At 4681 out of 6000          At 4711 out of 6000          At 4740 out of 6000          At 4768 out of 6000          At 4803 out of 6000          At 4833 out of 6000          At 4863 out of 6000          merge: no waveform processing
+Linear transformation parameters: [0.99994722261766467, 10307975603.716408]
+Estimated delay: 1205.44855967
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..96]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+merge: no waveform processing
+Linear transformation parameters: [0.99994727369300329, 6607325190.000102]
+Estimated delay: 1088.96296296
+merge: merged successfully.
+* Delay override: 300
+* Active electrodes override: [1..96]
+* c_success: success
+* t_success: 2500000
+* t_stop = 2500000
+* Exclude unwanted images: ['circ_mask']
+* movie_begin_fname: _frame_0
+* Ignore unregistered keys
+At 4895 out of 6000          At 1 out of 6000          At 25 out of 6000          At 55 out of 6000          At 1 out of 2117          At 83 out of 6000          At 26 out of 2117          At 113 out of 6000          At 55 out of 2117          At 142 out of 6000          At 85 out of 2117          At 169 out of 6000          At 124 out of 2117          At 4923 out of 6000          At 192 out of 6000          At 222 out of 6000          At 153 out of 2117          At 254 out of 6000          At 186 out of 2117          At 281 out of 6000          At 310 out of 6000          At 219 out of 2117          At 340 out of 6000          At 374 out of 6000          At 249 out of 2117          At 403 out of 6000          At 436 out of 6000          At 281 out of 2117          At 4956 out of 6000          At 468 out of 6000          At 312 out of 2117          At 500 out of 6000          At 531 out of 6000          At 344 out of 2117          At 561 out of 6000          At 371 out of 2117          At 589 out of 6000          At 4981 out of 6000          At 624 out of 6000          At 403 out of 2117          At 654 out of 6000          At 426 out of 2117          At 679 out of 6000          At 711 out of 6000          At 454 out of 2117          At 738 out of 6000          At 475 out of 2117          At 777 out of 6000          At 503 out of 2117          At 814 out of 6000          At 5016 out of 6000          At 842 out of 6000          At 535 out of 2117          At 870 out of 6000          At 569 out of 2117          At 899 out of 6000          At 600 out of 2117          At 930 out of 6000          At 954 out of 6000          At 654 out of 2117          At 983 out of 6000          At 5049 out of 6000          At 1022 out of 6000          At 683 out of 2117          At 1054 out of 6000          At 714 out of 2117          At 1085 out of 6000          At 1114 out of 6000          At 743 out of 2117          At 1135 out of 6000          At 776 out of 2117          At 1170 out of 6000          At 806 out of 2117          At 5081 out of 6000          At 1199 out of 6000          At 1230 out of 6000          At 839 out of 2117          At 868 out of 2117          At 1264 out of 6000          At 898 out of 2117          At 1294 out of 6000          At 1327 out of 6000          At 926 out of 2117          At 1359 out of 6000          At 5110 out of 6000          At 959 out of 2117          At 1391 out of 6000          At 990 out of 2117          At 1418 out of 6000          At 1018 out of 2117          At 1446 out of 6000          At 1057 out of 2117          At 1479 out of 6000          At 5139 out of 6000          At 1511 out of 6000          At 1087 out of 2117          At 1537 out of 6000          At 1116 out of 2117          At 1558 out of 6000          At 1148 out of 2117          At 1581 out of 6000          At 5170 out of 6000          At 1610 out of 6000          At 1180 out of 2117          At 1642 out of 6000          At 1215 out of 2117          At 1675 out of 6000          At 1241 out of 2117          At 1707 out of 6000          At 5199 out of 6000          At 1275 out of 2117          At 1735 out of 6000          At 1764 out of 6000          At 1306 out of 2117          At 1798 out of 6000          At 5229 out of 6000          At 1826 out of 6000          At 1333 out of 2117          At 1856 out of 6000          At 1361 out of 2117          At 1887 out of 6000          At 1393 out of 2117          At 1916 out of 6000          At 1947 out of 6000          At 2001 out of 6000          At 1421 out of 2117          At 5262 out of 6000          At 2024 out of 6000          At 1451 out of 2117          At 2051 out of 6000          At 1485 out of 2117          At 2085 out of 6000          At 5285 out of 6000          At 2124 out of 6000          At 1509 out of 2117          At 2145 out of 6000          At 2175 out of 6000          At 1541 out of 2117          At 5314 out of 6000          At 2205 out of 6000          At 2237 out of 6000          At 1568 out of 2117          At 2266 out of 6000          At 5345 out of 6000          At 2294 out of 6000          At 1595 out of 2117          At 2323 out of 6000          At 2352 out of 6000          At 1630 out of 2117          At 5377 out of 6000          At 2383 out of 6000          At 2412 out of 6000          At 1660 out of 2117          At 2444 out of 6000          At 1688 out of 2117          At 5405 out of 6000          At 2473 out of 6000          At 1717 out of 2117          At 2505 out of 6000          At 2526 out of 6000          At 1749 out of 2117          At 5434 out of 6000          At 2557 out of 6000          At 2587 out of 6000          At 1786 out of 2117          At 2618 out of 6000          At 1818 out of 2117          At 2647 out of 6000          At 2670 out of 6000          At 5463 out of 6000          At 1847 out of 2117          At 2700 out of 6000          At 2726 out of 6000          At 1871 out of 2117          At 2758 out of 6000          At 5492 out of 6000          At 1900 out of 2117          At 2786 out of 6000          At 1923 out of 2117          At 2821 out of 6000          At 5523 out of 6000          At 2852 out of 6000          At 1944 out of 2117          At 2882 out of 6000          At 1975 out of 2117          At 2910 out of 6000          At 5553 out of 6000          At 2940 out of 6000          At 2004 out of 2117          At 2967 out of 6000          At 2991 out of 6000          At 2032 out of 2117          At 2060 out of 2117          At 5582 out of 6000          At 3019 out of 6000          At 3043 out of 6000          At 2088 out of 2117          At 3072 out of 6000          At 5616 out of 6000          At 3104 out of 6000          Done.                                
+At 3132 out of 6000          At 3163 out of 6000          At 5655 out of 6000          At 3195 out of 6000          At 3227 out of 6000          At 3256 out of 6000          At 3285 out of 6000          At 3313 out of 6000          At 5686 out of 6000          At 3342 out of 6000          At 3375 out of 6000          At 5719 out of 6000          At 3429 out of 6000          At 3461 out of 6000          At 5751 out of 6000          At 3494 out of 6000          At 3524 out of 6000          At 3557 out of 6000          At 3591 out of 6000          At 5783 out of 6000          At 3625 out of 6000          At 5804 out of 6000          At 3657 out of 6000          At 3684 out of 6000          At 5831 out of 6000          At 3719 out of 6000          At 3747 out of 6000          At 5863 out of 6000          At 3779 out of 6000          At 3818 out of 6000          At 3843 out of 6000          At 5887 out of 6000          At 3876 out of 6000          At 3907 out of 6000          At 3944 out of 6000          At 5919 out of 6000          At 3971 out of 6000          At 4001 out of 6000          At 4024 out of 6000          At 4054 out of 6000          At 5946 out of 6000          At 4083 out of 6000          At 5974 out of 6000          At 4111 out of 6000          At 4145 out of 6000          At 4173 out of 6000          Done.                                
+[Parallel(n_jobs=5)]: Done   4 out of   8 |elapsed: 44.4min remaining: 44.4min
+[Parallel(n_jobs=5)]: Done   5 out of   8 |elapsed: 44.4min remaining: 26.6min
+[Parallel(n_jobs=5)]: Done   6 out of   8 |elapsed: 44.4min remaining: 14.8min
+[Parallel(n_jobs=5)]: Done   7 out of   8 |elapsed: 44.4min remaining:  6.3min
+At 4210 out of 6000          At 4238 out of 6000          At 4269 out of 6000          At 4299 out of 6000          At 4326 out of 6000          At 4358 out of 6000          At 4389 out of 6000          At 4421 out of 6000          At 4451 out of 6000          At 4475 out of 6000          At 4529 out of 6000          At 4563 out of 6000          At 4584 out of 6000          At 4623 out of 6000          At 4649 out of 6000          At 4681 out of 6000          At 4711 out of 6000          At 4740 out of 6000          At 4768 out of 6000          At 4803 out of 6000          At 4833 out of 6000          At 4863 out of 6000          At 4895 out of 6000          At 4923 out of 6000          At 4956 out of 6000          At 4981 out of 6000          At 5016 out of 6000          At 5049 out of 6000          At 5081 out of 6000          At 5110 out of 6000          At 5139 out of 6000          At 5170 out of 6000          At 5199 out of 6000          At 5229 out of 6000          At 5262 out of 6000          At 5285 out of 6000          At 5314 out of 6000          At 5345 out of 6000          At 5377 out of 6000          At 5405 out of 6000          At 5434 out of 6000          At 5463 out of 6000          At 5492 out of 6000          At 5523 out of 6000          At 5553 out of 6000          At 5582 out of 6000          At 5616 out of 6000          At 5655 out of 6000          At 5686 out of 6000          At 5719 out of 6000          At 5751 out of 6000          At 5783 out of 6000          At 5804 out of 6000          At 5831 out of 6000          At 5863 out of 6000          At 5887 out of 6000          At 5919 out of 6000          At 5946 out of 6000          At 5974 out of 6000          Done.                                
+[Parallel(n_jobs=5)]: Done   8 out of   8 |elapsed: 53.5min remaining:    0.0s
+* n_jobs = 5
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_002
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_002.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_002.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_003
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_003.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_003.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_002
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_002.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_002.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_001
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_001.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_001.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_001
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_001.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_001.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+[Parallel(n_jobs=5)]: Done   1 out of   8 |elapsed:  1.2min remaining:  8.1min
+[Parallel(n_jobs=5)]: Done   2 out of   8 |elapsed:  1.2min remaining:  3.5min
+[Parallel(n_jobs=5)]: Done   3 out of   8 |elapsed:  1.2min remaining:  1.9min
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_003
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_003.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_003.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_004
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_004.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_004.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+[Parallel(n_jobs=5)]: Done   4 out of   8 |elapsed:  1.6min remaining:  1.6min
+[Parallel(n_jobs=5)]: Done   5 out of   8 |elapsed:  1.6min remaining:   58.4s
+[Parallel(n_jobs=5)]: Done   6 out of   8 |elapsed:  1.6min remaining:   32.5s
+[Parallel(n_jobs=5)]: Done   7 out of   8 |elapsed:  1.6min remaining:   13.9s
+OF = data/d003_Tito/subproj/100_PSTH/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_004
+FILES = ['data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_004.psf.pk']
+  * n_bins = 2600
+At (1/1): data/d003_Tito/data_postproc/Tito_20110909_MovieGallant110413_S110720A_NSP2_P_004.psf.pk
+Traceback (most recent call last):
+  File "bin/plot_PSTH.py", line 244, in <module>
+    main()
+  File "bin/plot_PSTH.py", line 237, in main
+    plot_all(db, pp, log=flog, log2=flog2)
+  File "bin/plot_PSTH.py", line 103, in plot_all
+    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
+TypeError: 'int' object is not subscriptable
+[Parallel(n_jobs=5)]: Done   8 out of   8 |elapsed:  2.0min remaining:    0.0s

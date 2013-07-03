@@ -1,0 +1,9 @@
+receiving incremental file list
+Tito_20130401_Imp_M_RefA_001.txt
+Tito_20130402_Imp_A_RefC_003.txt
+Tito_20130402_Imp_M_RefA_001.txt
+Tito_20130402_Imp_M_RefA_004.txt
+Tito_20130402_Imp_P_RefA_002.txt
+
+sent 122 bytes  received 3974 bytes  1170.29 bytes/sec
+total size is 14230  speedup is 3.47

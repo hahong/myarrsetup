@@ -1,0 +1,9 @@
+receiving incremental file list
+Tito_20130404_CrossTalk_A_RefC_NSP1_001.txt
+Tito_20130404_Imp_A_RefC_NSP1_001.txt
+Tito_20130404_Imp_P_RefA_NSP1_002.txt
+Tito_20130405_CrossTalk_M_RefA_NSP1_001.txt
+Tito_20130405_Imp_M_RefA_NSP1_001.txt
+
+sent 122 bytes  received 2865 bytes  853.43 bytes/sec
+total size is 9172  speedup is 3.07

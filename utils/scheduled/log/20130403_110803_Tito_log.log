@@ -1,0 +1,15 @@
+receiving incremental file list
+Tito_20130401_Imp_A_RefC_001.txt
+Tito_20130401_Imp_A_RefC_002.txt
+Tito_20130401_Imp_P_RefA_001.txt
+Tito_20130402_Imp_A_RefC_001.txt
+Tito_20130402_Imp_A_RefC_004.txt
+Tito_20130402_Imp_A_RefC_005_Cbl44631119.txt
+Tito_20130402_Imp_A_RefC_006_Cbl44631119_after_clean.txt
+Tito_20130402_Imp_A_RefC_007_Cbl44631111_after_clean.txt
+Tito_20130402_Imp_A_RefC_008_Cbl2_after_clean_with_newnewfilmconn.txt
+Tito_20130402_Imp_M_RefA_002.txt
+Tito_20130402_Imp_P_RefA_003.txt
+
+sent 236 bytes  received 8699 bytes  2552.86 bytes/sec
+total size is 31306  speedup is 3.50

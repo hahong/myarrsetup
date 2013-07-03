@@ -1,0 +1,6 @@
+receiving file list ... rsync: link_stat "/Users/labuser/Documents/MWorks/Data/Tito*.mwk" failed: No such file or directory (2)
+done
+
+sent 24 bytes  received 21 bytes  30.00 bytes/sec
+total size is 0  speedup is 0.00
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1526) [Receiver=3.0.7]
