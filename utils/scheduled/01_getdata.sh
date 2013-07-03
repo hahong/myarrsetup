@@ -28,4 +28,4 @@ rsync -avzuH --exclude='/.snapshot' --remove-source-files labuser@dicarlo3:data/
 rsync -avzuH --exclude='/.snapshot' --remove-source-files labuser@dicarlo4:data/blackrock_log/Tito*.*       $PROJROOT/data/$CURRANIMAL/log_NSP2/    2>&1 | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_Tito_log_NSP2.log &
 wait
 
-rm -f $LOCK`
+rm -f $LOCK
