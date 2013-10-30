@@ -1,6 +1,0 @@
-receiving incremental file list
-rsync: link_stat "/home/labuser/data/blackrock_log/Tito*.*" failed: No such file or directory (2)
-
-sent 24 bytes  received 12 bytes  24.00 bytes/sec
-total size is 0  speedup is 0.00
-rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1536) [Receiver=3.0.9]

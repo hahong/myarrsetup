@@ -1,4 +1,0 @@
-* n_jobs = 5
-cp: cannot stat `data/d003_Tito/mwk/Tito_20111001_RSVPVOC2011trainval_sp3_S110720A_008.mwk': No such file or directory
-[Parallel(n_jobs=5)]: Done   1 out of   1  |elapsed:    0.0s remaining:    0.0s
-* n_jobs = 5

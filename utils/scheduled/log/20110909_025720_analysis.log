@@ -1,222 +1,0 @@
-* n_jobs = 5
-merge: no waveform processing
-Linear transformation parameters: [0.99994734211066594, 8813623805.8556499]
-Estimated delay: 1238.18877551
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..110]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-* Shifting based on this rule: 20110720A
-At 1 out of 2984          At 30 out of 2984          At 62 out of 2984          At 94 out of 2984          At 133 out of 2984          At 162 out of 2984          At 194 out of 2984          At 226 out of 2984          At 254 out of 2984          At 279 out of 2984          At 316 out of 2984          At 347 out of 2984          At 368 out of 2984          At 401 out of 2984          At 430 out of 2984          At 460 out of 2984          At 483 out of 2984          At 515 out of 2984          At 544 out of 2984          At 577 out of 2984          At 605 out of 2984          At 628 out of 2984          At 659 out of 2984          At 680 out of 2984          At 709 out of 2984          At 737 out of 2984          At 767 out of 2984          At 793 out of 2984          At 825 out of 2984          At 852 out of 2984          At 879 out of 2984          At 910 out of 2984          At 945 out of 2984          At 974 out of 2984          At 1001 out of 2984          At 1031 out of 2984          At 1055 out of 2984          At 1085 out of 2984          At 1113 out of 2984          At 1140 out of 2984          At 1170 out of 2984          At 1198 out of 2984          At 1230 out of 2984          At 1260 out of 2984          At 1289 out of 2984          At 1318 out of 2984          At 1350 out of 2984          At 1381 out of 2984          At 1415 out of 2984          merge: no waveform processing
-Linear transformation parameters: [0.99994730472013904, 5153173970.8838043]
-Estimated delay: 1191.75074184
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..96]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-At 1449 out of 2984          At 1480 out of 2984          At 1 out of 3413          At 33 out of 3413          At 63 out of 3413          At 1511 out of 2984          At 92 out of 3413          At 122 out of 3413          At 150 out of 3413          At 1540 out of 2984          At 180 out of 3413          At 219 out of 3413          At 248 out of 3413          At 280 out of 3413          At 1572 out of 2984          At 313 out of 3413          At 350 out of 3413          At 384 out of 3413          At 1602 out of 2984          At 412 out of 3413          At 442 out of 3413          At 477 out of 3413          At 1631 out of 2984          At 505 out of 3413          At 528 out of 3413          At 559 out of 3413          At 1659 out of 2984          At 588 out of 3413          At 620 out of 3413          At 1693 out of 2984          At 655 out of 3413          At 678 out of 3413          At 708 out of 3413          At 1725 out of 2984          At 736 out of 3413          At 775 out of 3413          At 1749 out of 2984          At 807 out of 3413          At 840 out of 3413          At 1784 out of 2984          At 869 out of 3413          At 896 out of 3413          At 1814 out of 2984          At 1847 out of 2984          At 1875 out of 2984          At 1908 out of 2984          At 1947 out of 2984          At 2001 out of 2984          At 2030 out of 2984          At 2059 out of 2984          At 2087 out of 2984          At 2118 out of 2984          At 2152 out of 2984          At 2184 out of 2984          At 2209 out of 2984          At 2248 out of 2984          At 920 out of 3413          At 2302 out of 2984          At 2323 out of 2984          At 2356 out of 2984          At 2386 out of 2984          At 2417 out of 2984          At 2441 out of 2984          At 2472 out of 2984          At 2502 out of 2984          At 2525 out of 2984          At 2554 out of 2984          At 2581 out of 2984          At 2610 out of 2984          At 2642 out of 2984          At 2672 out of 2984          At 2701 out of 2984          At 2732 out of 2984          At 2764 out of 2984          At 2797 out of 2984          At 2828 out of 2984          At 2860 out of 2984          At 2889 out of 2984          At 2922 out of 2984          At 2957 out of 2984          At 949 out of 3413          Done.                                
-At 981 out of 3413          merge: no waveform processing
-Linear transformation parameters: [0.99994726099001807, 15615370356.738153]
-Estimated delay: 1253.32102273
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..110]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-* Shifting based on this rule: 20110720A
-At 1013 out of 3413          At 1034 out of 3413          At 1062 out of 3413          At 1094 out of 3413          At 1123 out of 3413          At 1 out of 4224          At 29 out of 4224          At 1156 out of 3413          At 58 out of 4224          At 1186 out of 3413          At 97 out of 4224          At 1215 out of 3413          At 126 out of 4224          At 161 out of 4224          At 1247 out of 3413          At 190 out of 4224          At 1278 out of 3413          At 223 out of 4224          At 1299 out of 3413          At 254 out of 4224          At 285 out of 4224          At 1327 out of 3413          At 318 out of 4224          At 1354 out of 3413          At 350 out of 4224          At 385 out of 4224          At 1383 out of 3413          At 414 out of 4224          At 1410 out of 3413          At 444 out of 4224          At 1444 out of 3413          At 474 out of 4224          At 1498 out of 3413          At 504 out of 4224          At 534 out of 4224          At 1531 out of 3413          At 561 out of 4224          At 1561 out of 3413          At 594 out of 4224          At 1590 out of 3413          At 623 out of 4224          At 655 out of 4224          At 1622 out of 3413          At 683 out of 4224          At 1654 out of 3413          At 704 out of 4224          At 1685 out of 3413          At 735 out of 4224          At 1715 out of 3413          At 789 out of 4224          At 1740 out of 3413          At 826 out of 4224          At 1771 out of 3413          At 855 out of 4224          At 1795 out of 3413          At 876 out of 4224          merge: no waveform processing
-Linear transformation parameters: [0.9999472892894119, 11897272105.255941]
-Estimated delay: 1285.20776256
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..110]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-* Shifting based on this rule: 20110720A
-At 1826 out of 3413          merge: no waveform processing
-Linear transformation parameters: [0.99994730591073744, 5153173951.1866207]
-Estimated delay: 1191.75074184
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..110]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-* Shifting based on this rule: 20110720A
-At 908 out of 4224          At 1852 out of 3413          At 938 out of 4224          At 1886 out of 3413          At 969 out of 4224          At 1 out of 3413          At 1 out of 5040          At 1915 out of 3413          At 33 out of 3413          At 1002 out of 4224          At 29 out of 5040          At 63 out of 3413          At 61 out of 5040          At 1942 out of 3413          At 92 out of 3413          At 1030 out of 4224          At 89 out of 5040          At 122 out of 3413          At 122 out of 5040          At 1973 out of 3413          At 1061 out of 4224          At 150 out of 3413          At 155 out of 5040          At 2001 out of 3413          At 180 out of 3413          At 185 out of 5040          At 1091 out of 4224          At 219 out of 3413          At 219 out of 5040          At 2033 out of 3413          At 248 out of 3413          At 250 out of 5040          At 1119 out of 4224          At 280 out of 3413          At 2060 out of 3413          At 313 out of 3413          At 277 out of 5040          At 1151 out of 4224          At 2089 out of 3413          At 309 out of 5040          At 350 out of 3413          At 384 out of 3413          At 1183 out of 4224          At 338 out of 5040          At 2118 out of 3413          At 412 out of 3413          At 375 out of 5040          At 1206 out of 4224          At 2146 out of 3413          At 442 out of 3413          At 405 out of 5040          At 477 out of 3413          At 433 out of 5040          At 1238 out of 4224          At 2179 out of 3413          At 462 out of 5040          At 505 out of 3413          At 2207 out of 3413          At 528 out of 3413          At 494 out of 5040          At 1266 out of 4224          At 559 out of 3413          At 529 out of 5040          merge: no waveform processing
-Linear transformation parameters: [0.99994726264472422, 8813623793.8377171]
-Estimated delay: 1159.43548387
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..96]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-At 2236 out of 3413          At 1293 out of 4224          At 588 out of 3413          At 558 out of 5040          At 2257 out of 3413          At 620 out of 3413          At 1317 out of 4224          At 581 out of 5040          At 1344 out of 4224          At 655 out of 3413          At 2285 out of 3413          At 1 out of 2984          At 612 out of 5040          At 678 out of 3413          At 30 out of 2984          At 1375 out of 4224          At 62 out of 2984          At 641 out of 5040          At 2316 out of 3413          At 708 out of 3413          At 94 out of 2984          At 133 out of 2984          At 1404 out of 4224          At 672 out of 5040          At 736 out of 3413          At 2344 out of 3413          At 162 out of 2984          At 701 out of 5040          At 1429 out of 4224          At 194 out of 2984          At 775 out of 3413          At 226 out of 2984          At 725 out of 5040          At 2375 out of 3413          At 1458 out of 4224          At 807 out of 3413          At 254 out of 2984          At 279 out of 2984          At 753 out of 5040          At 2396 out of 3413          At 316 out of 2984          At 840 out of 3413          At 1497 out of 4224          At 347 out of 2984          At 785 out of 5040          At 368 out of 2984          At 869 out of 3413          At 2425 out of 3413          At 809 out of 5040          At 401 out of 2984          At 1529 out of 4224          At 896 out of 3413          At 430 out of 2984          At 841 out of 5040          At 2452 out of 3413          At 920 out of 3413          At 460 out of 2984          At 1558 out of 4224          At 483 out of 2984          At 872 out of 5040          At 949 out of 3413          At 2484 out of 3413          At 515 out of 2984          At 902 out of 5040          At 544 out of 2984          At 1581 out of 4224          At 981 out of 3413          At 2516 out of 3413          At 577 out of 2984          At 931 out of 5040          At 1013 out of 3413          At 605 out of 2984          At 1613 out of 4224          At 2541 out of 3413          At 628 out of 2984          At 659 out of 2984          At 680 out of 2984          At 709 out of 2984          At 737 out of 2984          At 767 out of 2984          At 793 out of 2984          At 825 out of 2984          At 852 out of 2984          At 879 out of 2984          At 910 out of 2984          At 945 out of 2984          At 974 out of 2984          At 1001 out of 2984          At 1031 out of 2984          At 1055 out of 2984          At 952 out of 5040          At 1085 out of 2984          At 1113 out of 2984          At 1140 out of 2984          At 1034 out of 3413          At 1170 out of 2984          At 1198 out of 2984          At 1230 out of 2984          At 1260 out of 2984          At 1289 out of 2984          At 1318 out of 2984          At 1350 out of 2984          At 1381 out of 2984          At 1415 out of 2984          At 1449 out of 2984          At 1480 out of 2984          At 1511 out of 2984          At 1540 out of 2984          At 1572 out of 2984          At 1602 out of 2984          At 1631 out of 2984          At 1659 out of 2984          At 1693 out of 2984          At 1725 out of 2984          At 1749 out of 2984          At 1784 out of 2984          At 1814 out of 2984          At 1847 out of 2984          At 1875 out of 2984          At 1908 out of 2984          At 1947 out of 2984          At 2001 out of 2984          At 2030 out of 2984          At 2059 out of 2984          At 2087 out of 2984          At 2118 out of 2984          At 2152 out of 2984          At 2184 out of 2984          At 2209 out of 2984          At 2248 out of 2984          At 2302 out of 2984          At 2323 out of 2984          At 2356 out of 2984          At 2386 out of 2984          At 2417 out of 2984          At 2441 out of 2984          At 2472 out of 2984          At 1640 out of 4224          At 2502 out of 2984          At 2525 out of 2984          At 2554 out of 2984          At 2581 out of 2984          At 2610 out of 2984          At 2642 out of 2984          At 2672 out of 2984          At 2701 out of 2984          At 2732 out of 2984          At 2764 out of 2984          At 2797 out of 2984          At 2828 out of 2984          At 2860 out of 2984          At 2889 out of 2984          At 2922 out of 2984          At 2957 out of 2984          At 986 out of 5040          At 1062 out of 3413          Done.                                
-At 2570 out of 3413          At 1094 out of 3413          At 1674 out of 4224          At 1015 out of 5040          At 2597 out of 3413          At 1123 out of 3413          At 1046 out of 5040          At 1708 out of 4224          At 2625 out of 3413          At 1156 out of 3413          At 1075 out of 5040          At 2654 out of 3413          At 1738 out of 4224          At 1186 out of 3413          At 1107 out of 5040          At 2685 out of 3413          At 1766 out of 4224          At 1135 out of 5040          At 1215 out of 3413          At 1165 out of 5040          At 1247 out of 3413          At 1792 out of 4224          At 2716 out of 3413          At 1821 out of 4224          At 1195 out of 5040          At 1278 out of 3413          At 2751 out of 3413          At 1216 out of 5040          At 1853 out of 4224          At 1299 out of 3413          At 2783 out of 3413          At 1327 out of 3413          At 1250 out of 5040          At 1887 out of 4224          At 1354 out of 3413          At 2813 out of 3413          At 1281 out of 5040          At 2850 out of 3413          At 1383 out of 3413          At 1915 out of 4224          At 1309 out of 5040          At 1410 out of 3413          At 2885 out of 3413          At 1945 out of 4224          At 1339 out of 5040          At 1444 out of 3413          At 2915 out of 3413          At 1366 out of 5040          At 1980 out of 4224          At 1498 out of 3413          At 2945 out of 3413          At 1398 out of 5040          At 1531 out of 3413          At 2004 out of 4224          At 1430 out of 5040          At 2975 out of 3413          At 1561 out of 3413          At 1465 out of 5040          At 2043 out of 4224          At 3006 out of 3413          At 1492 out of 5040          At 1590 out of 3413          At 2073 out of 4224          At 1524 out of 5040          At 3039 out of 3413          At 2100 out of 4224          At 1622 out of 3413          At 1553 out of 5040          At 3068 out of 3413          At 2129 out of 4224          At 1654 out of 3413          At 1583 out of 5040          At 3098 out of 3413          At 2154 out of 4224          At 1685 out of 3413          At 1611 out of 5040          At 3131 out of 3413          At 1715 out of 3413          At 2175 out of 4224          At 1634 out of 5040          At 1740 out of 3413          At 2206 out of 4224          At 3165 out of 3413          At 1667 out of 5040          At 3197 out of 3413          At 2238 out of 4224          At 1771 out of 3413          At 1699 out of 5040          At 3228 out of 3413          At 1795 out of 3413          At 1732 out of 5040          At 2262 out of 4224          At 1826 out of 3413          At 1758 out of 5040          At 3267 out of 3413          At 2316 out of 4224          At 1852 out of 3413          At 1785 out of 5040          At 3299 out of 3413          At 1886 out of 3413          At 2346 out of 4224          At 1810 out of 5040          At 3331 out of 3413          At 1915 out of 3413          At 2370 out of 4224          At 1849 out of 5040          At 1942 out of 3413          At 3361 out of 3413          At 2400 out of 4224          At 1973 out of 3413          At 1879 out of 5040          At 3390 out of 3413          At 2428 out of 4224          At 2001 out of 3413          At 1908 out of 5040          At 2451 out of 4224          Done.                                
-At 2033 out of 3413          At 1947 out of 5040          At 2481 out of 4224          At 2060 out of 3413          At 2001 out of 5040          At 2089 out of 3413          At 2511 out of 4224          At 2118 out of 3413          At 2025 out of 5040          At 2548 out of 4224          At 2146 out of 3413          At 2055 out of 5040          At 2580 out of 4224          At 2088 out of 5040          At 2179 out of 3413          At 2611 out of 4224          At 2115 out of 5040          At 2207 out of 3413          At 2154 out of 5040          At 2644 out of 4224          At 2236 out of 3413          At 2675 out of 4224          At 2183 out of 5040          At 2257 out of 3413          At 2215 out of 5040          At 2704 out of 4224          At 2285 out of 3413          At 2245 out of 5040          At 2737 out of 4224          At 2316 out of 3413          At 2276 out of 5040          At 2764 out of 4224          At 2304 out of 5040          At 2344 out of 3413          At 2797 out of 4224          At 2375 out of 3413          At 2333 out of 5040          At 2831 out of 4224          At 2356 out of 5040          At 2396 out of 3413          At 2861 out of 4224          At 2387 out of 5040          At 2425 out of 3413          At 2888 out of 4224          At 2452 out of 3413          At 2416 out of 5040          At 2920 out of 4224          At 2484 out of 3413          At 2949 out of 4224          At 2445 out of 5040          At 2516 out of 3413          At 2476 out of 5040          At 2988 out of 4224          At 2541 out of 3413          At 2508 out of 5040          At 3020 out of 4224          At 2570 out of 3413          At 2541 out of 5040          At 2597 out of 3413          At 3055 out of 4224          At 2570 out of 5040          At 2599 out of 5040          At 2625 out of 3413          At 3086 out of 4224          At 2631 out of 5040          At 2654 out of 3413          At 3120 out of 4224          At 2661 out of 5040          At 2685 out of 3413          At 2688 out of 5040          At 3152 out of 4224          At 2716 out of 3413          At 2719 out of 5040          At 3182 out of 4224          At 2751 out of 3413          At 2747 out of 5040          At 2783 out of 3413          At 3211 out of 4224          At 2775 out of 5040          At 2813 out of 3413          At 3239 out of 4224          At 2850 out of 3413          At 2803 out of 5040          At 3268 out of 4224          At 2885 out of 3413          At 2833 out of 5040          At 3297 out of 4224          At 2867 out of 5040          At 2915 out of 3413          At 3320 out of 4224          At 2899 out of 5040          At 2945 out of 3413          At 3352 out of 4224          At 2932 out of 5040          At 2975 out of 3413          At 3384 out of 4224          At 3006 out of 3413          At 2967 out of 5040          At 3412 out of 4224          At 3441 out of 4224          At 3006 out of 5040          At 3039 out of 3413          At 3468 out of 4224          At 3068 out of 3413          At 3034 out of 5040          At 3098 out of 3413          At 3068 out of 5040          At 3497 out of 4224          At 3097 out of 5040          At 3131 out of 3413          At 3526 out of 4224          At 3127 out of 5040          At 3165 out of 3413          At 3561 out of 4224          At 3155 out of 5040          At 3197 out of 3413          At 3593 out of 4224          At 3187 out of 5040          At 3614 out of 4224          At 3228 out of 3413          At 3215 out of 5040          At 3267 out of 3413          At 3645 out of 4224          At 3247 out of 5040          At 3678 out of 4224          At 3299 out of 3413          At 3705 out of 4224          At 3274 out of 5040          At 3331 out of 3413          At 3733 out of 4224          At 3309 out of 5040          At 3361 out of 3413          At 3339 out of 5040          At 3765 out of 4224          At 3390 out of 3413          At 3796 out of 4224          At 3365 out of 5040          Done.                                
-[Parallel(n_jobs=5)]: Done   1 out of   8 |elapsed: 32.8min remaining: 229.6min
-[Parallel(n_jobs=5)]: Done   2 out of   8 |elapsed: 32.8min remaining: 98.4min
-At 3830 out of 4224          At 3394 out of 5040          At 3858 out of 4224          At 3426 out of 5040          At 3890 out of 4224          At 3458 out of 5040          At 3919 out of 4224          At 3949 out of 4224          At 3479 out of 5040          At 3975 out of 4224          At 3533 out of 5040          At 4003 out of 4224          At 4038 out of 4224          At 3556 out of 5040          At 4070 out of 4224          At 3593 out of 5040          At 4099 out of 4224          At 4127 out of 4224          At 3627 out of 5040          At 4159 out of 4224          At 3658 out of 5040          merge: no waveform processing
-Linear transformation parameters: [0.99994728807513777, 11897272123.398985]
-Estimated delay: 1285.20776256
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..96]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-At 4188 out of 4224          At 3685 out of 5040          At 3709 out of 5040          At 1 out of 5040          At 29 out of 5040          Done.                                
-At 61 out of 5040          At 89 out of 5040          At 3738 out of 5040          At 122 out of 5040          At 155 out of 5040          At 185 out of 5040          At 219 out of 5040          At 250 out of 5040          At 3759 out of 5040          At 277 out of 5040          At 309 out of 5040          At 338 out of 5040          At 375 out of 5040          At 405 out of 5040          At 3791 out of 5040          At 433 out of 5040          At 462 out of 5040          At 494 out of 5040          At 529 out of 5040          At 3823 out of 5040          At 558 out of 5040          At 581 out of 5040          At 3853 out of 5040          At 612 out of 5040          At 641 out of 5040          At 672 out of 5040          At 3884 out of 5040          At 701 out of 5040          At 725 out of 5040          At 753 out of 5040          At 785 out of 5040          At 3909 out of 5040          At 809 out of 5040          At 841 out of 5040          merge: no waveform processing
-Linear transformation parameters: [0.99994726133006562, 15615370375.283974]
-Estimated delay: 1253.32102273
-merge: merged successfully.
-* Delay override: 300
-* Active electrodes override: [1..96]
-* c_success: success
-* t_success: 2500000
-* t_stop = 2500000
-* Exclude unwanted images: ['circ_mask']
-* movie_begin_fname: _frame_0
-* Ignore unregistered keys
-At 872 out of 5040          At 3938 out of 5040          At 902 out of 5040          At 931 out of 5040          At 3968 out of 5040          At 952 out of 5040          At 1 out of 4224          At 986 out of 5040          At 29 out of 4224          At 58 out of 4224          At 1015 out of 5040          At 97 out of 4224          At 126 out of 4224          At 1046 out of 5040          At 161 out of 4224          At 4001 out of 5040          At 190 out of 4224          At 1075 out of 5040          At 223 out of 4224          At 1107 out of 5040          At 254 out of 4224          At 285 out of 4224          At 1135 out of 5040          At 318 out of 4224          At 350 out of 4224          At 4028 out of 5040          At 1165 out of 5040          At 385 out of 4224          At 414 out of 4224          At 1195 out of 5040          At 444 out of 4224          At 474 out of 4224          At 1216 out of 5040          At 504 out of 4224          At 4057 out of 5040          At 534 out of 4224          At 1250 out of 5040          At 561 out of 4224          At 1281 out of 5040          At 594 out of 4224          At 623 out of 4224          At 1309 out of 5040          At 655 out of 4224          At 4088 out of 5040          At 683 out of 4224          At 1339 out of 5040          At 704 out of 4224          At 735 out of 4224          At 1366 out of 5040          At 789 out of 4224          At 4113 out of 5040          At 1398 out of 5040          At 826 out of 4224          At 855 out of 4224          At 1430 out of 5040          At 876 out of 4224          At 1465 out of 5040          At 4143 out of 5040          At 908 out of 4224          At 938 out of 4224          At 1492 out of 5040          At 969 out of 4224          At 1524 out of 5040          At 4172 out of 5040          At 1002 out of 4224          At 1030 out of 4224          At 1553 out of 5040          At 1061 out of 4224          At 1091 out of 4224          At 1583 out of 5040          At 1119 out of 4224          At 4193 out of 5040          At 1611 out of 5040          At 1151 out of 4224          At 1634 out of 5040          At 1183 out of 4224          At 4223 out of 5040          At 1206 out of 4224          At 1667 out of 5040          At 1238 out of 4224          At 1699 out of 5040          At 1266 out of 4224          At 1732 out of 5040          At 1293 out of 4224          At 4255 out of 5040          At 1317 out of 4224          At 1758 out of 5040          At 1344 out of 4224          At 1375 out of 4224          At 1785 out of 5040          At 1404 out of 4224          At 4284 out of 5040          At 1810 out of 5040          At 1429 out of 4224          At 1849 out of 5040          At 1458 out of 4224          At 4314 out of 5040          At 1879 out of 5040          At 1497 out of 4224          At 1529 out of 4224          At 1908 out of 5040          At 1558 out of 4224          At 1947 out of 5040          At 1581 out of 4224          At 2001 out of 5040          At 4343 out of 5040          At 1613 out of 4224          At 2025 out of 5040          At 1640 out of 4224          At 2055 out of 5040          At 4374 out of 5040          At 1674 out of 4224          At 2088 out of 5040          At 1708 out of 4224          At 2115 out of 5040          At 1738 out of 4224          At 4405 out of 5040          At 2154 out of 5040          At 1766 out of 4224          At 1792 out of 4224          At 2183 out of 5040          At 4433 out of 5040          At 1821 out of 4224          At 2215 out of 5040          At 1853 out of 4224          At 2245 out of 5040          At 4468 out of 5040          At 1887 out of 4224          At 2276 out of 5040          At 1915 out of 4224          At 2304 out of 5040          At 4498 out of 5040          At 1945 out of 4224          At 2333 out of 5040          At 1980 out of 4224          At 2356 out of 5040          At 2004 out of 4224          At 4535 out of 5040          At 2387 out of 5040          At 2043 out of 4224          At 2416 out of 5040          At 2073 out of 4224          At 4559 out of 5040          At 2100 out of 4224          At 2445 out of 5040          At 2129 out of 4224          At 2476 out of 5040          At 4585 out of 5040          At 2154 out of 4224          At 2508 out of 5040          At 2175 out of 4224          At 4613 out of 5040          At 2541 out of 5040          At 2206 out of 4224          At 2238 out of 4224          At 2570 out of 5040          At 4642 out of 5040          At 2262 out of 4224          At 2599 out of 5040          At 2316 out of 4224          At 2631 out of 5040          At 2346 out of 4224          At 4676 out of 5040          At 2370 out of 4224          At 2661 out of 5040          At 2688 out of 5040          At 2400 out of 4224          At 2428 out of 4224          At 4708 out of 5040          At 2719 out of 5040          At 2451 out of 4224          At 2747 out of 5040          At 2481 out of 4224          At 4742 out of 5040          At 2511 out of 4224          At 2775 out of 5040          At 2548 out of 4224          At 4775 out of 5040          At 2803 out of 5040          At 2580 out of 4224          At 2611 out of 4224          At 2833 out of 5040          At 2644 out of 4224          At 2867 out of 5040          At 4802 out of 5040          At 2675 out of 4224          At 2899 out of 5040          At 2704 out of 4224          At 2932 out of 5040          At 2737 out of 4224          At 4856 out of 5040          At 2967 out of 5040          At 2764 out of 4224          At 2797 out of 4224          At 3006 out of 5040          At 2831 out of 4224          At 3034 out of 5040          At 4894 out of 5040          At 2861 out of 4224          At 3068 out of 5040          At 2888 out of 4224          At 3097 out of 5040          At 2920 out of 4224          At 4933 out of 5040          At 2949 out of 4224          At 3127 out of 5040          At 2988 out of 4224          At 3155 out of 5040          At 3020 out of 4224          At 4963 out of 5040          At 3187 out of 5040          At 3055 out of 4224          At 3215 out of 5040          At 3086 out of 4224          At 4986 out of 5040          At 3247 out of 5040          At 3120 out of 4224          At 3274 out of 5040          At 3152 out of 4224          At 5007 out of 5040          At 3182 out of 4224          At 3309 out of 5040          At 3211 out of 4224          At 3339 out of 5040          At 3239 out of 4224          At 3365 out of 5040          At 3268 out of 4224          Done.                                
-[Parallel(n_jobs=5)]: Done   3 out of   8 |elapsed: 45.5min remaining: 75.9min
-[Parallel(n_jobs=5)]: Done   4 out of   8 |elapsed: 45.5min remaining: 45.5min
-[Parallel(n_jobs=5)]: Done   5 out of   8 |elapsed: 45.5min remaining: 27.3min
-[Parallel(n_jobs=5)]: Done   6 out of   8 |elapsed: 45.5min remaining: 15.2min
-At 3394 out of 5040          At 3297 out of 4224          At 3426 out of 5040          At 3320 out of 4224          At 3458 out of 5040          At 3352 out of 4224          At 3479 out of 5040          At 3384 out of 4224          At 3533 out of 5040          At 3412 out of 4224          At 3556 out of 5040          At 3441 out of 4224          At 3593 out of 5040          At 3468 out of 4224          At 3627 out of 5040          At 3658 out of 5040          At 3497 out of 4224          At 3685 out of 5040          At 3526 out of 4224          At 3709 out of 5040          At 3561 out of 4224          At 3738 out of 5040          At 3759 out of 5040          At 3593 out of 4224          At 3791 out of 5040          At 3614 out of 4224          At 3823 out of 5040          At 3645 out of 4224          At 3853 out of 5040          At 3678 out of 4224          At 3705 out of 4224          At 3884 out of 5040          At 3733 out of 4224          At 3909 out of 5040          At 3765 out of 4224          At 3796 out of 4224          At 3938 out of 5040          At 3830 out of 4224          At 3968 out of 5040          At 3858 out of 4224          At 3890 out of 4224          At 4001 out of 5040          At 3919 out of 4224          At 4028 out of 5040          At 3949 out of 4224          At 4057 out of 5040          At 3975 out of 4224          At 4003 out of 4224          At 4088 out of 5040          At 4038 out of 4224          At 4113 out of 5040          At 4143 out of 5040          At 4070 out of 4224          At 4172 out of 5040          At 4099 out of 4224          At 4193 out of 5040          At 4127 out of 4224          At 4223 out of 5040          At 4159 out of 4224          At 4255 out of 5040          At 4188 out of 4224          At 4284 out of 5040          At 4314 out of 5040          Done.                                
-At 4343 out of 5040          At 4374 out of 5040          At 4405 out of 5040          At 4433 out of 5040          At 4468 out of 5040          At 4498 out of 5040          At 4535 out of 5040          At 4559 out of 5040          At 4585 out of 5040          At 4613 out of 5040          At 4642 out of 5040          At 4676 out of 5040          At 4708 out of 5040          At 4742 out of 5040          At 4775 out of 5040          At 4802 out of 5040          At 4856 out of 5040          At 4894 out of 5040          At 4933 out of 5040          At 4963 out of 5040          At 4986 out of 5040          At 5007 out of 5040          Done.                                
-[Parallel(n_jobs=5)]: Done   7 out of   8 |elapsed: 53.3min remaining:  7.6min
-[Parallel(n_jobs=5)]: Done   8 out of   8 |elapsed: 53.3min remaining:    0.0s
-* n_jobs = 5
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_002
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_002.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_002.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_002
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_002.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_002.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_001
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_001.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_001.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_001
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_001.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_001.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-[Parallel(n_jobs=5)]: Done   1 out of   8 |elapsed:  1.0min remaining:  7.1min
-[Parallel(n_jobs=5)]: Done   2 out of   8 |elapsed:  1.0min remaining:  3.1min
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_004
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_004.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_004.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_003
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_003.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_003.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-[Parallel(n_jobs=5)]: Done   3 out of   8 |elapsed:  1.4min remaining:  2.4min
-[Parallel(n_jobs=5)]: Done   4 out of   8 |elapsed:  1.4min remaining:  1.4min
-[Parallel(n_jobs=5)]: Done   5 out of   8 |elapsed:  1.4min remaining:   51.2s
-[Parallel(n_jobs=5)]: Done   6 out of   8 |elapsed:  1.4min remaining:   28.5s
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_004
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_004.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_004.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-OF = data/d003_Tito/subproj/100_PSTH/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_003
-FILES = ['data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_003.psf.pk']
-  * n_bins = 2600
-At (1/1): data/d003_Tito/data_postproc/Tito_20110908_MovieGallant110413_S110720A_NSP2_P_003.psf.pk
-Traceback (most recent call last):
-  File "bin/plot_PSTH.py", line 244, in <module>
-    main()
-  File "bin/plot_PSTH.py", line 237, in main
-    plot_all(db, pp, log=flog, log2=flog2)
-  File "bin/plot_PSTH.py", line 103, in plot_all
-    T = db[img]['mat'] / (float(db[img]['cnt']) / n_elec) * 1000.
-TypeError: 'int' object is not subscriptable
-[Parallel(n_jobs=5)]: Done   7 out of   8 |elapsed:  1.8min remaining:   15.7s
-[Parallel(n_jobs=5)]: Done   8 out of   8 |elapsed:  1.8min remaining:    0.0s

@@ -1,6 +1,0 @@
-receiving incremental file list
-Tito_20111001_RSVPVOC2011trainval_sp0_S110720A_NSP2_P_005.ccf
-Tito_20111001_RSVPVOC2011trainval_sp0_S110720A_NSP2_P_005.nev
-Tito_20111001_RSVPVOC2011trainval_sp0_S110720A_NSP2_P_005.ns5
-rsync error: received SIGUSR1 (code 19) at main.c(1306) [receiver=3.0.7]rsync error: received SIGINT, SIGTERM, or SIGHUP (code 20) at rsync.c(541) [generator=3.0.7]
-
