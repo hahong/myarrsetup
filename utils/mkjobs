@@ -4,6 +4,30 @@ import sys
 from maru.utils import parse_opts2
 from glob import glob
 
+##############################################################################
+#### Variables
+
+# -- common files' extensions: the first one is used first
+POSTPROC_EXTS = ['.psf.h5', '.psf.pk', '.psf.pkl']
+MWK_EXTS = ['.mwk']
+NEU_EXTS = ['.nev', '.plx']
+DIRSEP = ','
+BADEXT = '.bad'
+
+# -- command line patterns
+MERGE_CMD = r'( cp $mwksrc $mwkmerged && maru-merge $extopts $mwkmerged $neusrc && rm -f $mwkmerged/*.bak ) || echo Merge failure: $mwkmerged'   # noqa
+POSTPROC_CMD = r'maru-psinfo $extopts $mwkmerged $ppout || echo Postprocess failure: $ppout'   # noqa
+
+# -- for postproc()
+# Number of electrodes for each swcard config.
+# Each entry = (identifier string, number of channels)
+# Note that _S110720A_ is somewhat kludge (NSP2 data should be 96)
+NELEC_SPECS = [('S110204', 128), ('_S110720_', 128), ('_S110720A_', 110),
+        ('_NSP1_S130404', 128), ('', 96)]
+
+
+##############################################################################
+#### Main code
 USAGE = \
 """mkjobs: generates shell scripts for various levels of array data processing
 
@@ -28,12 +52,6 @@ PSTH plotting mode:
 Generates a shell script "out.sh" that can be used to plot PSTHs for each
 postprocessed .psf.h5 files.
 """
-
-# the first one is used first
-POSTPROC_EXTS = ['.psf.h5', '.psf.pk', '.psf.pkl']
-MWK_EXTS = ['.mwk']
-NEU_EXTS = ['.nev', '.plx']
-DIRSEP = ','
 
 
 def find_targets(paths, exts):
@@ -67,11 +85,12 @@ def getjoblines(patt, jobs, save=None):
     return res
 
 
+def isbad(fn, badext=BADEXT):
+    return os.path.exists(fn + badext)
+
+
 def merge(outfn, mwk_dir, neu_dir, mwkmerged_dir, extopts='',
-        mwk_exts=MWK_EXTS, neu_exts=NEU_EXTS):
-
-    merge_patt = r'( cp $mwksrc $mwkmerged && maru-merge $extopts $mwkmerged $neusrc && rm -f $mwkmerged/*.bak ) || echo Merge failure: $mwkmerged'   # noqa
-
+        mwk_exts=MWK_EXTS, neu_exts=NEU_EXTS, merge_cmd=MERGE_CMD):
     dmwksrc = find_targets(mwk_dir, mwk_exts)
     dneusrc = find_targets(neu_dir, neu_exts)
     dmwkdst = find_targets(mwkmerged_dir, mwk_exts)
@@ -80,6 +99,9 @@ def merge(outfn, mwk_dir, neu_dir, mwkmerged_dir, extopts='',
     for neusrc in sorted(dneusrc):
         if neusrc in dmwkdst:
             # already merged
+            continue
+        mwkmergedfn = mwkmerged_dir + os.sep + neusrc + mwk_exts[0]
+        if isbad(mwkmergedfn):
             continue
 
         m = [(neusrc.startswith(mwksrc), mwksrc) for mwksrc in sorted(dmwksrc)]
@@ -96,14 +118,17 @@ def merge(outfn, mwk_dir, neu_dir, mwkmerged_dir, extopts='',
         jobs[neusrc] = [
                 ('$mwksrc', dmwksrc[mwksrc]),
                 ('$neusrc', dneusrc[neusrc]),
-                ('$mwkmerged', mwkmerged_dir + os.sep + neusrc + mwk_exts[0]),
+                ('$mwkmerged', mwkmergedfn),
                 ('$extopts', extopts)
             ]
-    getjoblines(merge_patt, jobs, save=outfn)
+    getjoblines(merge_cmd, jobs, save=outfn)
 
 
 def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
-        postproc_exts=POSTPROC_EXTS, mwk_exts=MWK_EXTS):
+        postproc_exts=POSTPROC_EXTS, mwk_exts=MWK_EXTS,
+        postproc_cmd=POSTPROC_CMD,
+        nelec_specs=NELEC_SPECS):
+    opt0 = '--exclude_img=circ_mask --ign_unregistered --delay=300 --nelec=$nelec'
 
     dmwkdst = find_targets(mwkmerged_dir, mwk_exts)
     dpsfdst = find_targets(postproc_dir, postproc_exts)
@@ -113,8 +138,16 @@ def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
         if mwkdst in dpsfdst:
             # postfile already exists
             continue
+        ppoutfn = postproc_dir + os.sep + mwkdst + postproc_exts[0]
+        if isbad(ppoutfn):
+            continue
 
-        jobs[mwkdst] = mwkdst
+        jobs[mwkdst] = [
+                ('$mwkmerged', dmwkdst[mwkdst]),
+                ('$ppout', ppoutfn),
+                ('$extopts', extopts),
+            ]
+    getjoblines(postproc_cmd, jobs, save=outfn)
 
 
 def main(args, sep=DIRSEP):
