@@ -1,0 +1,159 @@
+#!/usr/bin/env python
+import os
+import sys
+from maru.utils import parse_opts2
+from glob import glob
+
+USAGE = \
+"""mkjobs: generates shell scripts for various levels of array data processing
+
+Merge mode:
+    mkjobs merge [options] <out.sh> <mwk dir> <neu dir> <mwk_merged dir>
+Generates a shell script "out.sh" that can be used to merge .mwk and .nev/.plx
+files.
+Options:
+    --extopts=<str>      Additional options to be passed for merging
+
+
+Postprocessing mode:
+    mkjobs postproc [options] <out.sh> <mwk_merged dir> <postproc dir>
+Generates a shell script "out.sh" that can be used to produce peristimulus-
+postprocessed .h5 files.  Each dir can be a comma separated list.
+Options:
+    --extopts=<str>      Additional options to be passed for postprocessing
+
+
+PSTH plotting mode:
+    mkjobs plotpsth [options] <out.sh> <postproc dir>
+Generates a shell script "out.sh" that can be used to plot PSTHs for each
+postprocessed .psf.h5 files.
+"""
+
+# the first one is used first
+POSTPROC_EXTS = ['.psf.h5', '.psf.pk', '.psf.pkl']
+MWK_EXTS = ['.mwk']
+NEU_EXTS = ['.nev', '.plx']
+DIRSEP = ','
+
+
+def find_targets(paths, exts):
+    if isinstance(paths, (str, unicode)):
+        paths = [paths]
+
+    fns = [(os.path.basename(f)[:-len(ext)], f)
+            for path in paths for ext in exts
+            for f in glob(path + os.sep + '*' + ext)]
+    fns.reverse()
+    return dict(fns)   # only select the last basenames in the reversed fns
+
+
+def getjoblines(patt, jobs, save=None):
+    """Gives a job list that are suitable for writelines."""
+    if patt[-1] != '\n':
+        patt += '\n'
+    if isinstance(jobs, dict):
+        jobs = [e for e in jobs.itervalues()]
+
+    res = []
+    for replaces in jobs:
+        r = patt
+        for sold, snew in replaces:
+            r = r.replace(sold, snew)
+        res.append(r)
+
+    if save is not None:
+        open(save, 'wt').writelines(res)
+
+    return res
+
+
+def merge(outfn, mwk_dir, neu_dir, mwkmerged_dir, extopts='',
+        mwk_exts=MWK_EXTS, neu_exts=NEU_EXTS):
+
+    merge_patt = r'( cp $mwksrc $mwkmerged && maru-merge $extopts $mwkmerged $neusrc && rm -f $mwkmerged/*.bak ) || echo Merge failure: $mwkmerged'   # noqa
+
+    dmwksrc = find_targets(mwk_dir, mwk_exts)
+    dneusrc = find_targets(neu_dir, neu_exts)
+    dmwkdst = find_targets(mwkmerged_dir, mwk_exts)
+
+    jobs = {}
+    for neusrc in sorted(dneusrc):
+        if neusrc in dmwkdst:
+            # already merged
+            continue
+
+        m = [(neusrc.startswith(mwksrc), mwksrc) for mwksrc in sorted(dmwksrc)]
+        match = [e[0] for e in m]
+        mwksrcs = [e[1] for e in m]
+
+        if sum(match) > 1:
+            raise ValueError('Multiple maching mwks with neu: %s' % neusrc)
+        elif sum(match) == 0:
+            # no matching mwk files
+            continue
+
+        mwksrc = mwksrcs[match.index(True)]
+        jobs[neusrc] = [
+                ('$mwksrc', dmwksrc[mwksrc]),
+                ('$neusrc', dneusrc[neusrc]),
+                ('$mwkmerged', mwkmerged_dir + os.sep + neusrc + mwk_exts[0]),
+                ('$extopts', extopts)
+            ]
+    getjoblines(merge_patt, jobs, save=outfn)
+
+
+def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
+        postproc_exts=POSTPROC_EXTS, mwk_exts=MWK_EXTS):
+
+    dmwkdst = find_targets(mwkmerged_dir, mwk_exts)
+    dpsfdst = find_targets(postproc_dir, postproc_exts)
+
+    jobs = {}
+    for mwkdst in sorted(dmwkdst):
+        if mwkdst in dpsfdst:
+            # postfile already exists
+            continue
+
+        jobs[mwkdst] = mwkdst
+
+
+def main(args, sep=DIRSEP):
+    try:
+        args, opts = parse_opts2(args[1:])
+        mode = args[0]
+        args = args[1:]
+
+        if mode == 'merge':
+            assert len(args) == 4, 'Incorrect arguments'
+        elif mode == 'postproc':
+            assert len(args) == 3, 'Incorrect arguments'
+        elif mode == 'plotpsth':
+            assert len(args) == 2, 'Incorrect arguments'
+        else:
+            assert False, 'Not valid mode: %s' % mode
+    except Exception as e:
+        print USAGE
+        if isinstance(e, AssertionError):
+            print '***', e
+        return 1
+
+    kwargs = {}
+    if 'extopts' in opts:
+        kwargs['extopts'] = opts['extopts']
+        print '* Extra options:', kwargs['opts']
+
+    outfn = args[0]
+    args = args[1:]
+    if not all([os.path.exists(e) for e in args]):
+        print 'Not all directories exist.'
+        return 1
+
+    if mode == 'merge':
+        merge(outfn, *args, **kwargs)
+    elif mode == 'postproc':
+        postproc(outfn, *args, **kwargs)
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))
