@@ -12,6 +12,8 @@ from glob import glob
 POSTPROC_EXTS = ['.psf.h5', '.psf.pk', '.psf.pkl']
 MWK_EXTS = ['.mwk']
 NEU_EXTS = ['.nev', '.plx']
+POSTPROC_PSTH_EXTS = ['.psf.h5']   # only this is supported for PSTH plotting
+PSTH_EXTS = ['.pdf']
 DIRSEP = ','
 BADEXT = '.bad'
 VARCHR = '$'
@@ -19,6 +21,7 @@ VARCHR = '$'
 # -- command line patterns
 MERGE_CMD = r'( cp $mwksrc $mwkmerged && maru-merge $extopts $mwkmerged $neusrc && rm -f $mwkmerged/*.bak ) || echo Merge failure: $mwkmerged'   # noqa
 POSTPROC_CMD = r'maru-psinfo $extopts $mwkmerged $ppout || echo Postprocess failure: $ppout'   # noqa
+PLOTPSTH_CMD = r'maru-check-psth $extopts $psthprefix $psf || echo PSTH analysis failure: $psf'   # noqa
 
 # -- for postproc()
 POSTPROC_OPTS_DEF = '--exclude_img=circ_mask --ign_unregistered --delay=300 --t_stop=350000 --nelec=$nelec $indvopts'  # noqa
@@ -62,7 +65,7 @@ Options:
 
 
 PSTH plotting mode:
-    mkjobs plotpsth [options] <out.sh> <postproc dir>
+    mkjobs plotpsth [options] <out.sh> <postproc dir> <PSTH dir>
 Generates a shell script "out.sh" that can be used to plot PSTHs for each
 postprocessed .psf.h5 files.
 """
@@ -177,6 +180,27 @@ def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
     getjoblines(postproc_cmd, jobs, save=outfn)
 
 
+def plotpsth(outfn, postproc_dir, psth_dir, extopts='',
+        postproc_exts=POSTPROC_PSTH_EXTS, psth_exts=PSTH_EXTS,
+        plotpsth_cmd=PLOTPSTH_CMD):
+    dpsfdst = find_targets(postproc_dir, postproc_exts)
+    dpsthdst = find_targets(psth_dir, psth_exts)
+
+    jobs = {}
+    for psf in sorted(dpsfdst):
+        if psf in dpsthdst:
+            # postfile already exists
+            continue
+        psthprefix = psth_dir + os.sep + psf
+
+        jobs[psf] = [
+                ('$psf', dpsfdst[psf]),
+                ('$psthprefix', psthprefix),
+                ('$extopts', extopts),
+            ]
+    getjoblines(plotpsth_cmd, jobs, save=outfn)
+
+
 def main(args, sep=DIRSEP):
     try:
         args, opts = parse_opts2(args[1:])
@@ -188,7 +212,7 @@ def main(args, sep=DIRSEP):
         elif mode == 'postproc':
             assert len(args) == 3, 'Incorrect arguments'
         elif mode == 'plotpsth':
-            assert len(args) == 2, 'Incorrect arguments'
+            assert len(args) == 3, 'Incorrect arguments'
         else:
             assert False, 'Not valid mode: %s' % mode
     except Exception as e:
@@ -212,6 +236,8 @@ def main(args, sep=DIRSEP):
         merge(outfn, *args, **kwargs)
     elif mode == 'postproc':
         postproc(outfn, *args, **kwargs)
+    elif mode == 'plotpsth':
+        plotpsth(outfn, *args, **kwargs)
     return 0
 
 
