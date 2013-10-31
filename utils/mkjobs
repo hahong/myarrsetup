@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
+import re
 from maru.utils import parse_opts2
 from glob import glob
 
@@ -13,17 +14,30 @@ MWK_EXTS = ['.mwk']
 NEU_EXTS = ['.nev', '.plx']
 DIRSEP = ','
 BADEXT = '.bad'
+VARCHR = '$'
 
 # -- command line patterns
 MERGE_CMD = r'( cp $mwksrc $mwkmerged && maru-merge $extopts $mwkmerged $neusrc && rm -f $mwkmerged/*.bak ) || echo Merge failure: $mwkmerged'   # noqa
 POSTPROC_CMD = r'maru-psinfo $extopts $mwkmerged $ppout || echo Postprocess failure: $ppout'   # noqa
 
 # -- for postproc()
+POSTPROC_OPTS_DEF = '--exclude_img=circ_mask --ign_unregistered --delay=300 --t_stop=350000 --nelec=$nelec $indvopts'  # noqa
 # Number of electrodes for each swcard config.
-# Each entry = (identifier string, number of channels)
-# Note that _S110720A_ is somewhat kludge (NSP2 data should be 96)
-NELEC_SPECS = [('S110204', 128), ('_S110720_', 128), ('_S110720A_', 110),
-        ('_NSP1_S130404', 128), ('', 96)]
+# Each entry = (regex pattern, number of channels)
+NELEC_SPECS = [
+        ('.*S110204.*', 128), ('.*_S110720_.*', 128),
+        ('.*_S110720A_.+_NSP.*', 96),
+        # when only _S110720A_ appears, then we need channel shift
+        ('.*_S110720A_.*', '96 --ch_shift=20110720A'),
+        ('.*_NSP1_S130404.*', 128), ('.*_NSP2_S130404.*', 128),
+        # default: 96 channels
+        ('.*', 96)]
+# Additional options for individual experiments
+# Each entry = (regex pattern, string)
+INDVOPTS_SPECS = [
+        ('.*Chou.*', '--extinfo'),
+        ('.*RSVPRF.*', '--extinfo'),
+        ('.*', '')]
 
 
 ##############################################################################
@@ -65,7 +79,14 @@ def find_targets(paths, exts):
     return dict(fns)   # only select the last basenames in the reversed fns
 
 
-def getjoblines(patt, jobs, save=None):
+def regexreplace(sold, sreplace, specs, fn):
+    for regex, snew in specs:
+        if re.match(regex, fn):
+            break
+    return sold.replace(sreplace, str(snew))
+
+
+def getjoblines(patt, jobs, save=None, check=True):
     """Gives a job list that are suitable for writelines."""
     if patt[-1] != '\n':
         patt += '\n'
@@ -78,10 +99,11 @@ def getjoblines(patt, jobs, save=None):
         for sold, snew in replaces:
             r = r.replace(sold, snew)
         res.append(r)
+        if check:
+            assert VARCHR not in r
 
     if save is not None:
         open(save, 'wt').writelines(res)
-
     return res
 
 
@@ -127,9 +149,8 @@ def merge(outfn, mwk_dir, neu_dir, mwkmerged_dir, extopts='',
 def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
         postproc_exts=POSTPROC_EXTS, mwk_exts=MWK_EXTS,
         postproc_cmd=POSTPROC_CMD,
-        nelec_specs=NELEC_SPECS):
-    opt0 = '--exclude_img=circ_mask --ign_unregistered --delay=300 --nelec=$nelec'
-
+        postproc_opts_def=POSTPROC_OPTS_DEF,
+        nelec_specs=NELEC_SPECS, indvopts_specs=INDVOPTS_SPECS):
     dmwkdst = find_targets(mwkmerged_dir, mwk_exts)
     dpsfdst = find_targets(postproc_dir, postproc_exts)
 
@@ -142,10 +163,16 @@ def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
         if isbad(ppoutfn):
             continue
 
+        opts_def = regexreplace(postproc_opts_def, '$nelec',
+                nelec_specs, mwkdst)
+        opts_def = regexreplace(opts_def, '$indvopts',
+                indvopts_specs, mwkdst)
+        assert VARCHR not in opts_def
+
         jobs[mwkdst] = [
                 ('$mwkmerged', dmwkdst[mwkdst]),
                 ('$ppout', ppoutfn),
-                ('$extopts', extopts),
+                ('$extopts', opts_def + ' ' + extopts),
             ]
     getjoblines(postproc_cmd, jobs, save=outfn)
 
