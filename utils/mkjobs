@@ -12,7 +12,8 @@ from glob import glob
 POSTPROC_EXTS = ['.psf.h5', '.psf.pk', '.psf.pkl']
 MWK_EXTS = ['.mwk']
 NEU_EXTS = ['.nev', '.plx']
-POSTPROC_PSTH_EXTS = ['.psf.h5']   # only this is supported for PSTH plotting
+POSTPROC_ADV_EXTS = ['.psf.h5']   # only this is supported for "advanced" jobs
+FEAT_EXTS = ['.feat.h5']
 PSTH_EXTS = ['.pdf']
 DIRSEP = ','
 BADEXT = '.bad'
@@ -22,8 +23,9 @@ VARCHR = '$'
 MERGE_CMD = r'( cp $mwksrc $mwkmerged && maru-merge $extopts $mwkmerged $neusrc && rm -f $mwkmerged/*.bak ) || echo Merge failure: $mwkmerged'   # noqa
 POSTPROC_CMD = r'maru-psinfo $extopts $mwkmerged $ppout || echo Postprocess failure: $ppout'   # noqa
 PLOTPSTH_CMD = r'maru-check-psth $extopts $psthprefix $psf || echo PSTH analysis failure: $psf'   # noqa
+PSF2FEAT_CMD = r'maru-util-psinfo2feat tbte $extopts $psf $feat $tbs $tes || echo Feature generation failure: $feat'  # noqa
 
-# -- for postproc()
+# -- for psinfo()
 POSTPROC_OPTS_DEF = '--exclude_img=circ_mask --ign_unregistered --delay=300 --t_stop=350000 --nelec=$nelec $indvopts'  # noqa
 # Number of electrodes for each swcard config.
 # Each entry = (regex pattern, number of channels)
@@ -43,31 +45,42 @@ INDVOPTS_SPECS = [
         ('.*', '')]
 
 
+# -- for psf2feat()
+DEFAULT_TBTE = [[70, 170], [50, 100], [100, 150], [150, 200], [200, 250],
+                [70, 270]]
+
+
 ##############################################################################
 #### Main code
 USAGE = \
-"""mkjobs: generates shell scripts for various levels of array data processing
+"""mkjobs <mode> [options] <output file name or STDOUT> <arg 1> <arg 2> ...
+Generates shell scripts for various levels of array data processing
 
 Merge mode:
-    mkjobs merge [options] <out.sh> <mwk dir> <neu dir> <mwk_merged dir>
-Generates a shell script "out.sh" that can be used to merge .mwk and .nev/.plx
-files.
+    mkjobs merge [options] <output> <mwk dir> <neu dir> <mwk_merged dir>
+Generates commands to merge .mwk and .nev/.plx files.
 Options:
-    --extopts=<str>      Additional options to be passed for merging
+    --extopts=<str>      Additional options passed to maru-merge
 
-
-Postprocessing mode:
-    mkjobs postproc [options] <out.sh> <mwk_merged dir> <postproc dir>
-Generates a shell script "out.sh" that can be used to produce peristimulus-
-postprocessed .h5 files.  Each dir can be a comma separated list.
+Processing peristimulus firing information mode:
+    mkjobs psf [options] <output> <mwk_merged dir> <psf dir>
+Generates commands to produce peristimulus firing information .psf.h5 files.
 Options:
-    --extopts=<str>      Additional options to be passed for postprocessing
+    --extopts=<str>      Additional options passed to maru-psinfo
 
+Feature computation mode:
+    mkjobs feat [options] <output> <psf dir> <feat dir>
+Generates commands to create time-binned rate code features.  Default
+integration time bines are: [70, 170], [50, 100], [100, 150], [150, 200],
+[200, 250], [70, 270] where numbers are in ms.
+Options:
+    --tbte=t_begin1,t_end1,t_begin2,t_end2,...
+                         Override the default time bins (in ms).
+    --extopts=<str>      Additional options passed to maru-util-psinfo2feat
 
 PSTH plotting mode:
-    mkjobs plotpsth [options] <out.sh> <postproc dir> <PSTH dir>
-Generates a shell script "out.sh" that can be used to plot PSTHs for each
-postprocessed .psf.h5 files.
+    mkjobs plotpsth <output> <psf dir> <PSTH dir>
+Generates commands to plot PSTHs for each processed .psf.h5 files.
 """
 
 
@@ -105,7 +118,9 @@ def getjoblines(patt, jobs, save=None, check=True):
         if check:
             assert VARCHR not in r
 
-    if save is not None:
+    if save == 'STDOUT':
+        print ''.join(res).strip()
+    elif save is not None:
         open(save, 'wt').writelines(res)
     return res
 
@@ -149,7 +164,7 @@ def merge(outfn, mwk_dir, neu_dir, mwkmerged_dir, extopts='',
     getjoblines(merge_cmd, jobs, save=outfn)
 
 
-def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
+def psinfo(outfn, mwkmerged_dir, postproc_dir, extopts='',
         postproc_exts=POSTPROC_EXTS, mwk_exts=MWK_EXTS,
         postproc_cmd=POSTPROC_CMD,
         postproc_opts_def=POSTPROC_OPTS_DEF,
@@ -181,7 +196,7 @@ def postproc(outfn, mwkmerged_dir, postproc_dir, extopts='',
 
 
 def plotpsth(outfn, postproc_dir, psth_dir, extopts='',
-        postproc_exts=POSTPROC_PSTH_EXTS, psth_exts=PSTH_EXTS,
+        postproc_exts=POSTPROC_ADV_EXTS, psth_exts=PSTH_EXTS,
         plotpsth_cmd=PLOTPSTH_CMD):
     dpsfdst = find_targets(postproc_dir, postproc_exts)
     dpsthdst = find_targets(psth_dir, psth_exts)
@@ -201,6 +216,31 @@ def plotpsth(outfn, postproc_dir, psth_dir, extopts='',
     getjoblines(plotpsth_cmd, jobs, save=outfn)
 
 
+def psf2feat(outfn, postproc_dir, feat_dir, extopts='',
+        postproc_exts=POSTPROC_ADV_EXTS, feat_exts=FEAT_EXTS,
+        psf2feat_cmd=PSF2FEAT_CMD, tbte=DEFAULT_TBTE):
+    dpsf = find_targets(postproc_dir, postproc_exts)
+    dfeat = find_targets(feat_dir, feat_exts)
+    tbs = ','.join([str(e[0]) for e in tbte])
+    tes = ','.join([str(e[1]) for e in tbte])
+
+    jobs = {}
+    for psf in sorted(dpsf):
+        if psf in dfeat:
+            # feat.h5 already exists
+            continue
+        featfn = feat_dir + os.sep + psf + feat_exts[0]
+
+        jobs[psf] = [
+                ('$psf', dpsf[psf]),
+                ('$feat', featfn),
+                ('$extopts', extopts),
+                ('$tbs', tbs),
+                ('$tes', tes)
+            ]
+    getjoblines(psf2feat_cmd, jobs, save=outfn)
+
+
 def main(args, sep=DIRSEP):
     try:
         args, opts = parse_opts2(args[1:])
@@ -209,9 +249,11 @@ def main(args, sep=DIRSEP):
 
         if mode == 'merge':
             assert len(args) == 4, 'Incorrect arguments'
-        elif mode == 'postproc':
+        elif mode == 'psf':
             assert len(args) == 3, 'Incorrect arguments'
         elif mode == 'plotpsth':
+            assert len(args) == 3, 'Incorrect arguments'
+        elif mode == 'feat':
             assert len(args) == 3, 'Incorrect arguments'
         else:
             assert False, 'Not valid mode: %s' % mode
@@ -225,6 +267,17 @@ def main(args, sep=DIRSEP):
     if 'extopts' in opts:
         kwargs['extopts'] = opts['extopts']
         print '* Extra options:', kwargs['opts']
+    if 'tbte' in opts:
+        tbte = opts['tbte'].split(',')
+        if len(tbte) % 2 != 0:
+            print '*** Unmatched t_begin and t_end'
+            return 1
+        tbte = [(int(tb), int(te)) for tb, te in zip(tbte[::2], tbte[1::2])]
+        if not all([te > tb for tb, te in tbte]):
+            print '*** t_end must be larger than t_begin'
+            return 1
+        kwargs['tbte'] = tbte
+        print '* Time-bins:', tbte
 
     outfn = args[0]
     args = args[1:]
@@ -234,10 +287,12 @@ def main(args, sep=DIRSEP):
 
     if mode == 'merge':
         merge(outfn, *args, **kwargs)
-    elif mode == 'postproc':
-        postproc(outfn, *args, **kwargs)
+    elif mode == 'psf':
+        psinfo(outfn, *args, **kwargs)
     elif mode == 'plotpsth':
         plotpsth(outfn, *args, **kwargs)
+    elif mode == 'feat':
+        psf2feat(outfn, *args, **kwargs)
     return 0
 
 
