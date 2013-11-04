@@ -1,14 +1,17 @@
 #!/bin/bash
 # This script is meant to be called by cronjobmaster.sh
-test "$PROJROOT" || PROJROOT=/mindhive/dicarlolab/proj/array_data/
-test "$LOGDIR" || LOGDIR=$PROJROOT/analysis/scheduled/log/
-LCLBIN=$PROJROOT/analysis/scheduled/
+test "$PROJROOT" || PROJROOT=/mindhive/dicarlolab/proj/array_data/array2/
+test "$LOGDIR" || LOGDIR=$PROJROOT/utils/scheduled/log/
+LCLBIN=$PROJROOT/utils/scheduled/
 REMOTEFILER=dicarlo2
 REMOTEUSER=array
-REMOTEBIN=array/analysis/scheduled/
-REMOTELOG=array/analysis/scheduled/log/
-REMOTEDATA=array/data/
+REMOTEBIN=array2/utils/scheduled/
+REMOTELOG=array2/utils/scheduled/log/
+REMOTEDATA=array2/data/
 LOCK=$LOGDIR/11_getdata.mh17.sh.lock
+# these two are to support some manual manipulation of the rsync behavior
+EXTOPTS1=$1
+EXTOPTS2=$2
 
 ###################################################################
 # if still processing the data at dicarlo2, then quits.
@@ -45,14 +48,16 @@ function syncall {
 	scp $REMOTEUSER@$REMOTEFILER:$RMTBADLST $LCLBADLST 2>&1
 	$LCLSET $LCLBADLST $lcldir
 	# file sync
-	rsync -avzuH --exclude='*.ns5' --exclude='*.ns5.*' --exclude='.*ns5*' --exclude='.*nev*' --exclude='.*ccf*' --exclude='.*mwk*' --exclude='*cluster_wd*' $REMOTEUSER@$REMOTEFILER:$rmtdir $lcldir 2>&1
+	# -z is removed, as the line bandwidth is high enough; -K is added to follow/keep dir symlinks on the receiver (mh17)
+	rsync -avuHK --exclude='*.ns5' --exclude='*.ns5.*' --exclude='.*ns5*' --exclude='.*nev*' --exclude='.*ccf*' --exclude='.*mwk*' --exclude='*cluster_wd*' $EXTOPTS1 $EXTOPTS2 $REMOTEUSER@$REMOTEFILER:$rmtdir $lcldir 2>&1
 }
 
 # -- 1. Tito
-syncall $REMOTEDATA/d002_Tito/ $PROJROOT/data/d002_Tito/ | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_Tito_dicarlo2_d002_Tito.log
-syncall $REMOTEDATA/d003_Tito/ $PROJROOT/data/d003_Tito/ | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_Tito_dicarlo2_d003_Tito.log
-# rsync -avzuH --exclude='*.ns5' --exclude='*.ns5.*' --exclude='*cluster_wd*' $REMOTEUSER@$REMOTEFILER:$REMOTEDATA/d002_Tito/ $PROJROOT/data/d002_Tito/ 2>&1 | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_Tito_dicarlo2.log &
-# wait
+syncall $REMOTEDATA/d004_Tito/ $PROJROOT/data/d004_Tito/ | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_Tito_dicarlo2_d004_Tito.log
+syncall $REMOTEDATA/d005_Tito/ $PROJROOT/data/d005_Tito/ | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_Tito_dicarlo2_d005_Tito.log
+
+echo $EXTOPTS1
+echo $EXTOPTS2
  
 # -- Done
 rm -f $LOCK

@@ -1,7 +1,7 @@
 #!/bin/bash
 test "$HOME" || HOME=/home/array/
-export PROJROOT=$HOME/array/
-export CRONDIR=$PROJROOT/analysis/scheduled/
+export PROJROOT=$HOME/array2/
+export CRONDIR=$PROJROOT/utils/scheduled/
 export LOGDIR=$CRONDIR/log/
 
 . $HOME/.profile 
