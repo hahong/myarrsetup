@@ -1,35 +1,66 @@
 #!/bin/bash
 # This script is meant to be called by cronjobmaster.sh
-test "$PROJROOT" || PROJROOT=/home/array/array/
-test "$LOGDIR" || LOGDIR=$PROJROOT/analysis/scheduled/log/
+test "$PROJROOT" || PROJROOT=/home/array/array2/
+test "$LOGDIR" || LOGDIR=$PROJROOT/utils/scheduled/log/
 LOCK=$LOGDIR/02_analyze.sh.lock
-JOBNAME=joblist/`date +%Y%m%d`_04_merge+collect_`date +%H%M`.sh
-JOBNAMEPSTH=joblist/`date +%Y%m%d`_10_plot_PSTH_`date +%H%M`.sh
 LOGNAME=$LOGDIR/`date +%Y%m%d_%H%M%S`_analysis.log
 HTMLPSTH=/home/array/public_html/psth/
+EXTOPTS=$1
+NJOBSDEF=4
 
 ###################################################################
-# -- Merge and collect
-
 if [ -f $LOCK ]; then
 	# -- if locked, terminates immediately
 	echo "Locked:" $LOCK
 	exit 1
 fi
-
-cd $PROJROOT/analysis/
 touch $LOCK   # create a lock file so that no data transfer occurs from mh17
 
-# -- 1. Tito
-# Merge and collect
-./04_par_merge+collect_PS_firing.py > $JOBNAME
-dirnev=data/d004_Tito/neudat_NSP2/ ./04_par_merge+collect_PS_firing.py --merge_opts='multinsp NSP' >> $JOBNAME
-NJOBS=5 parrun.py $JOBNAME 2>&1 | tee -a $LOGNAME
+function procall {
+	bdir=$1      # basedir
+	pdfhome=$2   # pdf destination in the dataset
+	test "$pdfhome" || pdfhome=subproj/100_PSTH   # default pdfhome
+	# merge
+	jobname=joblist/`date +%Y%m%d_z0_merge_%H%M%S`.sh
+	utils/mkjobs merge STDOUT $bdir/mwk $bdir/neudat_NSP1 $bdir/mwk_merged >> $jobname
+	utils/mkjobs merge STDOUT $bdir/mwk $bdir/neudat_NSP2 $bdir/mwk_merged >> $jobname
+	echo === Merge Begin ===
+	NJOBS=$NJOBSDEF parrun.py $jobname 2>&1
+	echo === Merge End ===
+	echo
+	
+	# collect psf
+	jobname=joblist/`date +%Y%m%d_z1_psf_%H%M%S`.sh
+	utils/mkjobs psf STDOUT $bdir/mwk_merged $bdir/data_postproc >> $jobname
+	echo === Merge Begin ===
+	NJOBS=$NJOBSDEF parrun.py $jobname 2>&1
+	echo === Merge End ===
+	echo
+	
+	# feature comp
+	jobname=joblist/`date +%Y%m%d_z2_feat_%H%M%S`.sh
+	utils/mkjobs feat STDOUT $bdir/data_postproc $bdir/data_postproc >> $jobname
+	echo === Merge Begin ===
+	NJOBS=$NJOBSDEF parrun.py $jobname 2>&1
+	echo === Merge End ===
+	echo
+	
+	# plot psths
+	jobname=joblist/`date +%Y%m%d_z9_feat_%H%M%S`.sh
+	utils/mkjobs plotpsth STDOUT $bdir/data_postproc $bdir/$pdfhome >> $jobname
+	echo === PSTHs Begin ===
+	NJOBS=$NJOBSDEF parrun.py $jobname 2>&1
+	rsync -a $bdir/$pdfhome/*.pdf $HTMLPSTH 2>&1
+	echo === PSTHs End ===
+	echo
 
-# Plot PSTHs
-./10_plot_PSTH.sh > $JOBNAMEPSTH
-NJOBS=5 parrun.py $JOBNAMEPSTH 2>&1 | tee -a $LOGNAME 
-rsync -a $PROJROOT/data/d004_Tito/subproj/100_PSTH/*.pdf $HTMLPSTH
+	sleep 2  # to ensure separate job files
+}
+
+# -- Process and analyze all the following active datasets
+cd $PROJROOT/
+procall data/d004_Tito | tee -a $LOGNAME 
+#procall data/d005_Tito | tee -a $LOGNAME 
 
 # -- END
 rm -f $LOCK

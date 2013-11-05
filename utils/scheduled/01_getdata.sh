@@ -27,7 +27,7 @@ function getall {
 	# ssh labuser@dicarlo4 'mv -b data/Tito*.txt data/blackrock_log/; mv -b data/Tito*.* data/blackrock_default/'   # move potentially dislocated files to collect repo dir
 	rsync -avuH --exclude='/.snapshot' --remove-source-files labuser@$HOST_NSP1:data/blackrock_default/${animal}*.*  $PROJROOT/data/$dst/neudat_NSP1/ 2>&1 | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_${animal}_neudat_NSP1.log &
 	rsync -avuH --exclude='/.snapshot' --remove-source-files labuser@$HOST_NSP2:data/blackrock_default/${animal}*.*  $PROJROOT/data/$dst/neudat_NSP2/ 2>&1 | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_${animal}_neudat_NSP2.log &
-	rsync -avuH --exclude='/.snapshot' --remove-source-files labuser@$HOST_MWK:Documents/MWorks/Data/${animal}*.mwk  $PROJROOT/data/$dst/mwk/         2>&1 | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_${aniaml}_mwk.log &
+	rsync -avuH --exclude='/.snapshot' --remove-source-files labuser@$HOST_MWK:Documents/MWorks/Data/${animal}*.mwk  $PROJROOT/data/$dst/mwk/         2>&1 | tee -a $LOGDIR/`date +%Y%m%d_%H%M%S`_${animal}_mwk.log &
 	wait
 
 	# do not use "&" to avoid overwritting
