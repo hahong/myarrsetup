@@ -1,6 +1,6 @@
 #!/bin/bash
 test "$HOME" || HOME=/mindhive/dicarlolab/u/hahong/
-export PROJROOT=$HOME/teleport/array/array2/
+export PROJROOT=/mindhive/dicarlolab/proj/array_data/array2/
 export CRONDIR=$PROJROOT/utils/scheduled/
 export LOGDIR=$CRONDIR/log/
 
